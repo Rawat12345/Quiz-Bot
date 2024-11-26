@@ -75,5 +75,7 @@ def generate_final_response(session):
     """
 
     final_score = session.get("final_score")
+    
+    final_score = (final_score/len(PYTHON_QUESTION_LIST))*100
 
-    return f"Your final test result is: {final_score}."
+    return f"Your final test result is: {final_score}%"
